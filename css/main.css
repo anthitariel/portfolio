@@ -1,0 +1,158 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    font-style: 16px;
+    margin: 0;
+}
+
+div, p, input, button, form, span, a, ul, li {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+.header{
+    background: rgba(102,204,255,1);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,204,255,1)), color-stop(100%, rgba(51,153,204,1)));
+    background: linear-gradient(to right, rgba(102,204,255,1) 0%, rgba(51,153,204,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ccff', endColorstr='#3399cc', GradientType=1 );
+    padding-top:60px;
+    padding-bottom: 75px;
+    color: white;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    display: block;
+}
+
+.offer {
+    margin-top: 140px;
+    width: 565px;
+}
+
+.wrapper {
+    display: flex; 
+    justify-content: space-between;
+}
+
+span {
+    font-size: 59px;
+}
+
+.btn{
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    background: #ffcc33;
+    border-radius: 0;
+    width: 222px;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background: #fdd867;
+    color: #414040;
+}
+
+.intro {
+    margin-top: 20px;
+    margin-bottom: 45px;
+    width: 410px;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+.travel {
+    margin-top: 10px;
+}
+
+.learn {
+    padding-top: 108px;
+    padding-bottom: 118px;
+}
+
+.section-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.skill-title {
+    font-size: 19px;
+}
+
+.skill-text {
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+.skill {
+    width: 300px;
+    display: block;
+    text-align: center;
+}
+
+.icon {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.mail {
+    background: #ecf3f8;
+    padding-top: 104px;
+    padding-bottom: 106px;
+}
+
+input {
+    width: 343px;
+    height: 48px;
+    border: 1px solid #bbbbbb;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    border-radius: 0;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 420px;
+}
+
+.btn-form {
+    border: 0;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 343px;
+    margin-left: 420px;
+}
+
+.form {
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+
+.credits {
+    color: #ffffff;
+    font-size: 14px; 
+}
+
+.footer {
+    padding: 60px 0;
+    background: #164d7a;
+    text-align: center;
+}
+
