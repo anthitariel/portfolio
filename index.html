@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Домашнее задание 4 wayup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Домашнее задание wayup</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header id="header" class="header">
@@ -24,9 +26,9 @@
                     <p class="intro">Мои стремления + настойчивость позволят мне
                     достичь чего угодно. Я не верю в это. 
                     Я знаю это на 100%. Меня не остановить!</p>
-                    <a href="#" class="btn">Двигаться к мечте!</a>
+                    <a href="#" class="btn" id='btn'>Двигаться к мечте!</a>
                 </div>
-                <img src="img/travel.png" alt="Кругосветное путешествие" class="travel">
+                <img src="img/travel.png" alt="Кругосветное путешествие" class="travel animate__animated animate__shakeY">
             </div>
         </div>
     </header>
@@ -76,13 +78,9 @@
             </h2>
                 <form action="#" class="form">
                     <input type="text" name="name" placeholder="Имя" required>
-                    <br>
                     <input type="email" name="email" placeholder="E-mail" required>
-                    <br>
                     <input type="tel" name="tel" placeholder="Телефон" required>
-                    <br>
                     <input type="text" name="fly" placeholder="Куда я полечу в ближайшее время?" required>
-                    <br>
                     <button type="submit" class="btn btn-form">Отправить</button>
                 </form>
         </div>
@@ -95,6 +93,7 @@
             </p>
         </div>
     </footer>
+
     
 </body>
 </html>
