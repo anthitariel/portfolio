@@ -153,6 +153,10 @@ input, textarea {
     font-size: 14px;
 }
 
+#footer a {
+    text-decoration: none;
+}
+
 /* Responsive */
 
 /* 992 - 1200 px */
