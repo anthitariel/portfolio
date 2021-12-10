@@ -1,12 +1,6 @@
-html {
-    font-family: -apple-system, BlinkMacSystemFont, 
-    "Segoe UI", "Roboto", "Oxygen", 
-    "Ubuntu", "Cantarell", "Fira Sans", 
-    "Droid Sans", "Helvetica Neue", sans-serif;
-    color: #302f2fee;
-}
-
 body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
     font-size: 16px;
     padding: 0;
     margin: 0;
@@ -18,54 +12,74 @@ div, p, input, button, form, span, a, ul, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
-    font-weight: 400;
+    font-weight: 900;
 }
 
 p {
     line-height: 1.65em;
-    color: #302f2fcc;
-}
-
-address {
-    size: 16px;
-    font-style: normal;
-}
-
-a {
-    color: #131313;
-    letter-spacing: 1px;
-    font-size: 16px;
 }
 
 .container {
-    width: 60%;
+    width: 1170px;
     margin: 0 auto;
 }
 
-.header {
-    background: #ffffff;
+.header{
+    background: rgba(102,204,255,1);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,204,255,1)), color-stop(100%, rgba(51,153,204,1)));
+    background: linear-gradient(to right, rgba(102,204,255,1) 0%, rgba(51,153,204,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ccff', endColorstr='#3399cc', GradientType=1 );
-    margin-top: 70px;
-    margin-bottom: 20px;
+    padding-top: 60px;
+    padding-bottom: 75px;
+    color: #fff;
 }
 
-.logo {
-    height: 80px;
-}
-
-.offer {
-    margin-top: 30px;
+.wrapper {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
-	font-size: 27px;
+	font-size: 37x;
 }
 
+span {
+    font-size: 59px;
+}
 
 .intro {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
+    max-width: 400px;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    background: #ffcc33;
+    border-radius: 0;
+    width: 222px;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background: #fdd867;
+    color: #414040;
+}
+
+.red {
+    color: red;
+}
+
+.travel {
+    margin-top: 10px;
 }
 
 .learn {
@@ -74,16 +88,15 @@ a {
 }
 
 .section-title {
-    font-size: 20px;
-    text-align: left;
-    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .skills {
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .skill-title {
@@ -96,61 +109,58 @@ a {
 }
 
 .skill {
-    max-width: 200px;
+    width: 289px;
     display: block;
-    text-align: left;
+    text-align: center;
 } 
 
 .icon {
     padding-top: 12px;
     padding-bottom: 12px;
-    max-width: 150px;
 }
 
 .mail {
-    padding: 20px;
-    background: #F9F9F9;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    background: #ecf3f8;
+    padding-top: 104px;
+    padding-bottom: 106px;
 }
 
-input, textarea {
-    border: 1px solid #E6E6E6;
+input {
+    height: 48px;
+    border: 1px solid #bbbbbb;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 0;
     padding: 12px 20px;
     box-sizing: border-box;
     margin: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, 
-    "Segoe UI", "Roboto", "Oxygen", 
-    "Ubuntu", "Cantarell", "Fira Sans", 
-    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-#submit {
-    display: inline;
-    text-align: right;
+.btn-form {
+    height: 48px;
+    border: 0;
+    cursor: pointer;
+    margin: 10px;
+    padding: 12px 20px;
+    width: 400px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-
-#details {
-    max-height: -webkit-fit-content;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
+    max-width: 420px;
 }
 
 .footer {
-    padding: 20px 0;
-    text-align: left;
+    padding: 60px 0;
+    background: #164d7a;
+    text-align: center;
 }
 
 .credits {
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 14px; 
 }
 
 /* Responsive */
@@ -213,4 +223,3 @@ input, textarea {
     } 
 }
 
-}
