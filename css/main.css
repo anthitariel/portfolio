@@ -160,6 +160,9 @@ input, textarea {
     .container {
         width: 960px;
     }
+    h1 {
+        font-size: 80%;
+    }
 }
 
 /* 768 - 992 px */
