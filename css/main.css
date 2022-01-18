@@ -141,11 +141,11 @@ input, textarea {
     margin: 0 auto;
 }
 
-#details {
+/* #details {
     max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
     max-height: fit-content;
-}
+} */
 
 .footer {
     margin-top: 100px;
@@ -222,5 +222,7 @@ input, textarea {
     input {
         width: 100%;
     } 
+}
+}
 }
 
