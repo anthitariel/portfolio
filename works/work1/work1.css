@@ -1,3 +1,8 @@
+* {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333333;
@@ -22,7 +27,7 @@ p {
 }
 
 .container {
-    width: 1170px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -42,10 +47,6 @@ p {
     align-items: center;
 }
 
-.title {
-	font-size: 37x;
-}
-
 span {
     font-size: 59px;
 }
@@ -59,8 +60,8 @@ span {
 .btn {
     font-family: 'Montserrat', sans-serif;
     color: #333333;
-    background: #ffcc33;
-    border-radius: 0;
+    background: #ffff33;
+    border-radius: 10px; 
     width: 222px;
     padding: 20px 0;
     text-align: center;
@@ -70,8 +71,7 @@ span {
 }
 
 .btn:hover {
-    background: #fdd867;
-    color: #414040;
+    background: #ffcc33;
 }
 
 .red {
@@ -130,7 +130,7 @@ input {
     border: 1px solid #bbbbbb;
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
-    border-radius: 0;
+    border-radius: 10px; 
     padding: 12px 20px;
     box-sizing: border-box;
     margin: 10px;
@@ -143,6 +143,7 @@ input {
     margin: 10px;
     padding: 12px 20px;
     width: 400px;
+    border-radius: 10px;
 }
 
 .form {
@@ -163,20 +164,30 @@ input {
     font-size: 14px; 
 }
 
-/* Responsive */
+.fixed-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .fixed-box a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .fixed-box svg {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
 
-/* 992 - 1200 px */
-@media screen and (max-width: 1200px) {
-    .container {
-        width: 960px;
-    }
-}
-
-/* 768 - 992 px */
 @media screen and (max-width: 992px) {
-    .container {
-        width: 720px;
-    }
+
     .wrapper {
 		flex-direction: column;
 		text-align: center;
@@ -203,23 +214,23 @@ input {
     }
 }
 
-/* 576 - 768 px */
 @media screen and (max-width: 768px) {
-    .container {
-        width: 540px;
-    }
+
     .travel {
         width: 100%;
     }
 }
 
-/* 0 - 576 px */
 @media screen and (max-width: 576px) {
     .container {
         width: 90%;
+    }
+    .wrapper {
+        margin-top: 10%;
     }
     input {
         width: 100%;
     } 
 }
+
 
