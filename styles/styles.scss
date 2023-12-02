@@ -1,4 +1,4 @@
-$primary-color: #2e2d2dee;
+$primary-color: #2e2b2b;
 $second-color: #3d3d3c;
 $link-color: #3C9DD0;
 
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: $primary-color; 
     z-index: 999; 
   }
 
@@ -182,11 +182,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #slick {
 
-  @include box-shadow(1rem 1rem 2rem #888);
-  
   .slick-cards {
-    background-color: #2e2b2b;
-    height: 15rem;
+    background-color: $primary-color;
+    height: 10rem;
     color: white;
     display: flex;
     flex-direction: column;
@@ -266,6 +264,9 @@ address {
   html {
     font-size: 90%; 
   }
+  .container {
+    width: 95%;
+  };
   .hero-title h1 { 
     font-size: 80%;
   }
