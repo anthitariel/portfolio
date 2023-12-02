@@ -181,10 +181,10 @@ h1, h2, h3, h4, h5, h6 {
 // Slick Carousel 
 
 #slick {
-
+  margin-top: 2%;
   .slick-cards {
     background-color: $primary-color;
-    height: 10rem;
+    height: 18rem;
     color: white;
     display: flex;
     flex-direction: column;
@@ -261,13 +261,22 @@ address {
 }
 
 @media screen and (max-width: 768px) {
+
   html {
     font-size: 90%; 
   }
+
   .container {
     width: 95%;
   };
+
+  #slick {
+    .slick-cards {
+      height: 10rem;
+      }
+  }
+
   .hero-title h1 { 
-    font-size: 80%;
+    font-size: 1.4rem;
   }
 }

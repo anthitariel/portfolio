@@ -1,11 +1,12 @@
 @charset "UTF-8";
 html {
   font-size: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', sans-serif;
   color: #2e2b2b;
   line-height: 1.5rem;
   text-align: left;
@@ -25,6 +26,7 @@ a {
   color: #2e2b2b;
   text-decoration: none;
 }
+
 a:hover {
   color: #3C9DD0;
   cursor: pointer;
@@ -49,59 +51,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 5% 0;
 }
+
 .hero-title h1 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #2e2b2b;
 }
+
 .hero-title a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   color: #3C9DD0;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
+
 .hero-title a .logo {
   height: 3rem;
   margin-right: 3%;
   border-radius: 50%;
-  box-shadow: 0.1rem 0.1rem 0.5rem #888;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem #888;
+          box-shadow: 0.1rem 0.1rem 0.5rem #888;
 }
+
 .hero-title a .logo:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .hero-content {
   margin: 2% 0;
 }
+
 .hero-content span {
   font-weight: 600;
 }
 
 .skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .skills-list li {
   margin-right: 0.3rem;
 }
+
 .skills-list li:hover {
   color: #3d3d3c;
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   font-weight: 700;
 }
+
 .skills-list li::after {
-  content: "•";
+  content: '•';
   margin-left: 0.3rem;
   color: #2e2b2b;
 }
+
 .skills-list li:last-child::after {
   content: none;
 }
@@ -111,11 +138,13 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 2rem;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 1rem 1rem 2rem #888;
+  -webkit-box-shadow: 1rem 1rem 2rem #888;
+          box-shadow: 1rem 1rem 2rem #888;
   z-index: 1000;
 }
 
@@ -151,24 +180,39 @@ h1, h2, h3, h4, h5, h6 {
 #slick {
   margin-top: 2%;
 }
+
 #slick .slick-cards {
   background-color: #2e2b2b;
   height: 18rem;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
+
 #slick .slick-cards:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   cursor: pointer;
   background-color: #505050;
 }
+
 #slick .slick-cards a {
   text-decoration: none;
 }
+
 #slick .slick-cards h3,
 #slick .slick-cards p {
   text-align: center;
@@ -177,12 +221,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   line-height: 2.2rem;
 }
+
 #slick .slick-cards h3 {
   font-size: 1.7rem;
 }
+
 #slick .slick-cards p {
   font-size: 1rem;
 }
+
 #slick .slick-prev,
 #slick .slick-next {
   content: "▶";
@@ -193,16 +240,20 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 50%;
 }
+
 #slick .slick-prev:hover,
 #slick .slick-next:hover {
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   font-weight: 700;
   cursor: pointer;
 }
+
 #slick .slick-prev.slick-prev,
 #slick .slick-next.slick-prev {
   left: 0;
 }
+
 #slick .slick-prev.slick-next,
 #slick .slick-next.slick-next {
   right: 0;
@@ -212,6 +263,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin: 5% 0;
 }
+
 .footer a {
   text-decoration: none;
 }
@@ -234,5 +286,4 @@ address {
     font-size: 1.4rem;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
