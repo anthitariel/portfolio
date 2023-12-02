@@ -273,7 +273,11 @@ address {
   #slick {
     .slick-cards {
       height: 10rem;
-      }
+    }
+    .slick-prev,
+    .slick-next {
+    font-size: 2rem;
+    }
   }
 
   .hero-title h1 { 

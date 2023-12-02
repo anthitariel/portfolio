@@ -282,6 +282,10 @@ address {
   #slick .slick-cards {
     height: 10rem;
   }
+  #slick .slick-prev,
+  #slick .slick-next {
+    font-size: 2rem;
+  }
   .hero-title h1 {
     font-size: 1.4rem;
   }
