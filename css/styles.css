@@ -277,7 +277,10 @@ address {
     font-size: 90%;
   }
   .container {
-    width: 95%;
+    width: 80%;
+  }
+  .popup img {
+    max-width: 40rem;
   }
   #slick .slick-cards {
     height: 10rem;
@@ -288,6 +291,15 @@ address {
   }
   .hero-title h1 {
     font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 95%;
+  }
+  .popup img {
+    max-width: 25rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
