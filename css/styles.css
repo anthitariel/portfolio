@@ -1,10 +1,13 @@
 @charset "UTF-8";
+html, p {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', sans-serif;
   color: #2e2b2b;
@@ -30,6 +33,10 @@ a {
 a:hover {
   color: #3C9DD0;
   cursor: pointer;
+}
+
+#highlighted {
+  font-weight: 600;
 }
 
 .container {
@@ -91,14 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 .hero-title a .logo:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-.hero-content {
-  margin: 2% 0;
-}
-
-.hero-content span {
-  font-weight: 600;
 }
 
 .skills-list {
