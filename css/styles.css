@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #2e2b2b;
+  margin-left: 3%;
 }
 
 .hero-title a {
@@ -89,7 +90,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title a .logo {
   height: 3rem;
-  margin-right: 3%;
   border-radius: 50%;
   -webkit-box-shadow: 0.1rem 0.1rem 0.5rem #888;
           box-shadow: 0.1rem 0.1rem 0.5rem #888;
@@ -112,24 +112,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skills-list li {
-  margin-right: 0.3rem;
+  margin-right: 1rem;
 }
 
 .skills-list li:hover {
   color: #3d3d3c;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  font-weight: 700;
-}
-
-.skills-list li::after {
-  content: '•';
-  margin-left: 0.3rem;
-  color: #2e2b2b;
+  font-weight: 600;
 }
 
 .skills-list li:last-child::after {
   content: none;
+}
+
+.skills-list li a:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 .popup {

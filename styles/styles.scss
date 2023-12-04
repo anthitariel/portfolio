@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.6rem;
     font-weight: 700;
     color: $primary-color;
+    margin-left: 3%;
   }
 
   a {
@@ -95,7 +96,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .logo {
       height: 3rem; 
-      margin-right: 3%;
       border-radius: 50%;
       @include box-shadow(0.1rem 0.1rem 0.5rem #888);
 
@@ -114,24 +114,20 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 
   li {
-    margin-right: 0.3rem;
+    margin-right: 1rem;
 
     &:hover {
       color: $second-color;
       transform: scale(1.05);
-      font-weight: 700;
-    }
-
-    &::after {
-      content: '•';
-      margin-left: 0.3rem;
-      color: $primary-color;
+      font-weight: 600;
     }
 
     &:last-child::after {
       content: none;
     }
-
+    a:hover {
+        transform: none;
+    }
   }
 }
 
