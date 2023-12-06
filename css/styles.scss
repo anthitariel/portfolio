@@ -342,4 +342,8 @@ address {
 #floatingIcon svg {
   width: 100%;
   height: 100%;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
