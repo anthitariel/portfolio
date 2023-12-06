@@ -1,4 +1,17 @@
 $(document).ready(function () {
+  // intro overlay
+  setTimeout(function () {
+    hideIntro();
+  }, 5000);
+
+  $(document).mousemove(function () {
+    hideIntro();
+  });
+
+  function hideIntro() {
+    $("#introOverlay").hide();
+  }
+
   // the certificate popup
   const wayUpCertificate = $("#wayUpCertificate");
   const certificatePopup = $("#certificatePopup");
