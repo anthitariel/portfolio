@@ -1,40 +1,55 @@
 $(document).ready(function () {
-  // intro overlay
-  setTimeout(function () {
-    hideIntro();
-  }, 5000);
+  // toggle dark and light mode
+  toggleModeIcon();
 
-  $(document).mousemove(function () {
-    hideIntro();
+  $(".mode-toggle").click(function () {
+    $(".mode").toggleClass("dark");
+    toggleModeIcon();
   });
 
-  function hideIntro() {
-    $("#introOverlay").hide();
+  function toggleModeIcon() {
+    const modeIcon = $(".mode-icon");
+    const isDark = $(".mode").hasClass("dark");
+    modeIcon
+      .removeClass(isDark ? "fa-sun" : "fa-moon")
+      .addClass(isDark ? "fa-moon" : "fa-sun");
   }
 
-  // floating icon
-  setTimeout(() => {
-    changeIconPosition();
-    setInterval(changeIconPosition, 10000);
-  }, 5000);
-
-  $(document).on("click", function () {
-    changeIconPosition();
+  // menu scroll
+  $(".menu-primary li a").click(function () {
+    let targetSection = $(this).attr("href");
+    $("html, body").animate(
+      {
+        scrollTop: $(targetSection).offset().top,
+      },
+      1000
+    );
+    $(".menu-primary li a").removeClass("active");
+    $(this).addClass("active");
+    return false;
   });
 
-  function changeIconPosition() {
-    const icon = $("#floatingIcon");
-    const newPosition = getRandomPosition();
-    icon.stop().animate({ top: newPosition.top, left: newPosition.left });
-  }
+  $(window).scroll(function () {
+    let scrollPosition = $(window).scrollTop();
+    $(".menu-primary li a").each(function () {
+      let targetId = $(this).attr("href");
+      let targetSection = $(targetId);
+      if (
+        targetSection.position().top <= scrollPosition &&
+        targetSection.position().top + targetSection.height() > scrollPosition
+      ) {
+        $(".menu-primary li a").removeClass("active");
+        $(this).addClass("active");
+      }
+    });
+  });
 
-  function getRandomPosition() {
-    const windowHeight = $(window).height() - 50;
-    const windowWidth = $(window).width() - 50;
-    const top = Math.random() * windowHeight;
-    const left = Math.random() * windowWidth;
-    return { top: top, left: left };
-  }
+  // contact btn
+  $(document).ready(function () {
+    $(".contact-btn").click(function () {
+      window.location.href = "mailto:anfiya17@gmail.com";
+    });
+  });
 
   // the certificate popup
   const wayUpCertificate = $("#wayUpCertificate");

@@ -29,95 +29,60 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
   </head>
 
-  <body>
-    <div id="introOverlay">
-      <img src="img/vaquita.gif" id="introImage" alt="Intro Image" />
-    </div>
-
-    <div id="floatingIcon">
-      <?xml version="1.0" encoding="utf-8"?>
-      <svg
-        width="800px"
-        height="800px"
-        viewBox="0 0 64 64"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        aria-hidden="true"
-        role="img"
-        class="iconify iconify--emojione"
-        preserveAspectRatio="xMidYMid meet"
-      >
-        <path
-          d="M58.7 41.5c0-3.5 4.9-11.4 2.6-13.8c-2.5-2.6-8.3 8.5-11.2 8.5c-3.5 0-5.6-4.3-7.3-6.1c-1.4-1.4 2.6-7 .8-7.4c-7.5-1.8-8.5 2.6-12.6 1.5c-3.2-.8-6.5-1.3-9.7-1.3c-12 0-14.3 8.6-16.4 16.6C4.5 40.7 16.6 51 16.6 51s-9.2-5.2-9-4c1.5 6.6 7.7 10.8 14.7 12.4c2 .5 4.1.7 6.1.7c12.8 0 14.8-9.9 21.7-11.1c4.2-.7 8.7 7.4 11.1 4.9c2.6-2.6-2.5-8.3-2.5-12.4"
-          fill="#728389"
-        ></path>
-        <g fill="#8d9ba3">
-          <path
-            d="M48.1 60.5c-1.2 1.2-3.6 2.7-6.2 0s-5.4-7.5-4.2-8.7c1.2-1.2 5.8 1.7 8.4 4.4c2.6 2.6 3.2 3.1 2 4.3"
-          ></path>
-          <ellipse cx="33.4" cy="35.3" rx="2.2" ry="3.2"></ellipse>
-          <ellipse cx="37.6" cy="39.2" rx="1.2" ry="2.5"></ellipse>
-          <ellipse cx="39.9" cy="36" rx=".6" ry="1.7"></ellipse>
-        </g>
-        <g fill="#75d6ff">
-          <ellipse cx="5.3" cy="44" rx="1.7" ry="1.8"></ellipse>
-          <ellipse cx="6.3" cy="23.4" rx="4.3" ry="4.5"></ellipse>
-          <ellipse cx="12.8" cy="10.3" rx="8" ry="8.3"></ellipse>
-        </g>
-        <ellipse cx="18.7" cy="38.5" rx="7.1" ry="7.4" fill="#fcfcfa"></ellipse>
-        <ellipse cx="18.7" cy="38.5" rx="4.9" ry="5.1" fill="#29251c"></ellipse>
-      </svg>
-    </div>
-
-    <div class="container">
-      <header id="header" class="header">
-        <div class="hero-container">
-          <div class="hero-title">
-            <a href="https://github.com/anthitariel" target="_blank"
-              ><img
-                class="logo"
-                src="img/logo.png"
-                alt="Anfisa Domashova Logo"
-              />
-              <h1>Anfisa Domashova Portfolio</h1>
-            </a>
-          </div>
-          <p>
-            Hey! I'm Anfisa Domashova, a passionate
-            <a
-              href="#projects"
-              id="highlighted"
-              title="Click to learn more about my projects"
-              >Software Engineer</a
-            >
-            with a keen focus on
-            <span id="highlighted">front-end</span>
-            development — implementing user-friendly, responsive, and
-            mobile-first web applications. Guided by the
-            <span id="highlighted" title="Keep It Simple, Stupid"
-              >K.I.S.S.</span
-            >
-            principle and
-            <span
-              id="highlighted"
-              title="Thinking creatively and unconventionally"
-              >out-of-the-box</span
-            >
-            thinking I approach finding a solution in the fastest and most
-            innovative way.
-          </p>
-          <p>
-            I am dedicated to continuous learning, staying updated on the latest
-            technologies, and using my expertise to tackle challenging tasks for
-            successful project delivery.
-          </p>
+  <body class="mode">
+    <header>
+      <div class="header-container">
+        <nav>
+          <ul class="menu-primary">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+        <div class="mode-toggle">
+          <i class="fas mode-icon"></i>
         </div>
-      </header>
+      </div>
+    </header>
+    <section class="hero-section" id="home">
+      <div class="hero-text">
+        <h1>Hey! I'm a Software Engineer</h1>
+        <p>
+          dedicated to
+          <a
+            href="#projects"
+            class="highlighted"
+            title="Click to learn more about my projects"
+            >front-end </a
+          >development
+        </p>
+        <button class="contact-btn">Contact me</button>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="section-content">
+        <h2 class="section-title">Skills and Certification</h2>
+        <p>
+          Let me share a bit about myself – I'm Anfisa Domashova, passionate
+          about coding, enjoying traveling, and spending time with my
+          golden-hearted Golden Retriever. I specialize in developing
+          user-friendly, responsive, and mobile-first web applications.
+          Dedicated to continuous learning, I stay updated on the latest
+          technologies and use my expertise to tackle challenging tasks for
+          successful project delivery.
+        </p>
 
-      <section id="skills" class="skills">
-        <h2 class="section-title">Skills and technologies:</h2>
+        <h3 class="section-title">Skills:</h3>
         <ul class="skills-list">
           <li>JavaScript</li>
           <li>React.js</li>
@@ -141,10 +106,7 @@
           <li>SEO</li>
           <li>ThemeForest/GoDaddy/WordPress</li>
         </ul>
-      </section>
-
-      <section id="certification" class="projects">
-        <h2 class="section-title">Certification:</h2>
+        <h3 class="section-title">Certification:</h3>
         <ul class="skills-list">
           <li>
             <a
@@ -176,92 +138,100 @@
             <a href="#">WayUp Landing Page 2021</a>
           </li>
         </ul>
-      </section>
-
-      <div id="certificatePopup" class="popup">
-        <button id="closePopupBtn">X</button>
-        <img
-          src="img/certificate2.png"
-          alt="WayUp HTML Course Certificate 2021"
-        />
-      </div>
-      <div class="overlay"></div>
-
-      <section id="projects" class="projects">
-        <h2 class="section-title">Projects:</h2>
-        <p>
-          Here are some web applications I've worked on during my free time
-          outside the
-          <a
-            href="https://www.linkedin.com/in/anfisadomashova/"
-            target="_blank"
-            id="highlighted"
-            >full-time job</a
-          >. Interested in learning more? Feel free to
-          <a href="mailto:anfiya17@gmail.com" id="highlighted">contact me</a>
-        </p>
-        <div id="slick">
-          <a
-            href="https://github.com/anthitariel/js-magic-8-ball-codecademy/"
-            target="_blank"
-          >
-            <div class="slick slick-cards">
-              <h3>Magic 8 Ball</h3>
-              <p>Codecademy 2022</p>
-              <p>JS, HTML, CSS</p>
-            </div>
-          </a>
-          <a
-            href="https://github.com/anthitariel/js-weather-app/"
-            target="_blank"
-          >
-            <div class="slick slick-cards">
-              <h3>Weather App</h3>
-              <p>Coursera</p>
-              <p>JS, HTML, CSS</p>
-            </div>
-          </a>
-          <a
-            href="https://github.com/anthitariel/js-ecommerce-website/"
-            target="_blank"
-          >
-            <div class="slick slick-cards">
-              <h3>E-Commerce</h3>
-              <p>Accesa</p>
-              <p>JS, HTML, CSS</p>
-            </div>
-          </a>
-          <a
-            href="https://github.com/anthitariel/angularjs-bill-splitter-app-coursera/"
-            target="_blank"
-          >
-            <div class="slick slick-cards">
-              <h3>Bill Splitter App</h3>
-              <p>Coursera</p>
-              <p>Angular.js HTML CSS</p>
-            </div>
-          </a>
-          <a href="landing/landing.html" target="_blank">
-            <div class="slick slick-cards">
-              <h3>Landing Travel</h3>
-              <p>WayUp 2021</p>
-              <p>HTML, CSS</p>
-            </div>
-          </a>
+        <div id="certificatePopup" class="popup">
+          <button id="closePopupBtn">X</button>
+          <img
+            src="img/certificate2.png"
+            alt="WayUp HTML Course Certificate 2021"
+          />
         </div>
-      </section>
+        <div class="overlay"></div>
+      </div>
 
-      <footer id="footer" class="footer">
-        <address>
-          <a
-            href="https://github.com/anthitariel"
-            class="footer"
-            target="_blank"
-            >© Anthitariel</a
-          >
-        </address>
-      </footer>
-    </div>
+      <div class="section-image">
+        <img src="img/anthitariel-photo.jpg" alt="my photo" />
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p>
+        Guided by the
+        <span class="highlighted" title="Keep It Simple, Stupid">K.I.S.S.</span>
+        principle and
+        <span
+          class="highlighted"
+          title="Thinking creatively and unconventionally"
+          >out-of-the-box</span
+        >
+        thinking I approach finding a solution in the fastest and most
+        innovative way. implementing user-friendly, responsive, and mobile-first
+        web applications. Here are some web applications I've worked on during
+        my free time outside the
+        <a
+          href="https://www.linkedin.com/in/anfisadomashova/"
+          target="_blank"
+          class="highlighted"
+          >full-time job</a
+        >. Interested in learning more? Feel free to
+        <a href="mailto:anfiya17@gmail.com" class="highlighted">contact me.</a>
+      </p>
+      <div id="slick">
+        <a
+          href="https://github.com/anthitariel/js-magic-8-ball-codecademy/"
+          target="_blank"
+        >
+          <div class="slick slick-cards">
+            <h3>Magic 8 Ball</h3>
+            <p>Codecademy 2022</p>
+            <p>JS, HTML, CSS</p>
+          </div>
+        </a>
+        <a
+          href="https://github.com/anthitariel/js-weather-app/"
+          target="_blank"
+        >
+          <div class="slick slick-cards">
+            <h3>Weather App</h3>
+            <p>Coursera</p>
+            <p>JS, HTML, CSS</p>
+          </div>
+        </a>
+        <a
+          href="https://github.com/anthitariel/js-ecommerce-website/"
+          target="_blank"
+        >
+          <div class="slick slick-cards">
+            <h3>E-Commerce</h3>
+            <p>Accesa</p>
+            <p>JS, HTML, CSS</p>
+          </div>
+        </a>
+        <a
+          href="https://github.com/anthitariel/angularjs-bill-splitter-app-coursera/"
+          target="_blank"
+        >
+          <div class="slick slick-cards">
+            <h3>Bill Splitter App</h3>
+            <p>Coursera</p>
+            <p>Angular.js HTML CSS</p>
+          </div>
+        </a>
+        <a href="landing/landing.html" target="_blank">
+          <div class="slick slick-cards">
+            <h3>Landing Travel</h3>
+            <p>WayUp 2021</p>
+            <p>HTML, CSS</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <footer id="footer" class="footer">
+      <address>
+        <a href="https://github.com/anthitariel" class="footer" target="_blank"
+          >Anthitariel</a
+        >
+      </address>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -272,7 +242,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
       integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
     <script src="js/slider.js"></script>
     <script type="application/ld+json">
