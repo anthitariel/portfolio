@@ -284,6 +284,11 @@ body.dark #skills {
   margin-top: 10%;
 }
 
+.section-image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .section-title {
   margin-bottom: 3%;
 }
@@ -457,13 +462,28 @@ body.dark .skills-list li:hover {
   right: 0;
 }
 
-.footer {
-  text-align: center;
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 5% 0;
 }
 
-address {
+address a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1rem;
+}
+
+address a span {
+  margin-left: 3.5%;
 }
 
 @media screen and (max-width: 1024px) {

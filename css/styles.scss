@@ -247,6 +247,10 @@ body.dark #skills {
   border-radius: 0.5rem;
   opacity: 0.8;
   margin-top: 10%;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .section-title {
@@ -404,13 +408,20 @@ body.dark .skills-list {
   }
 }
 
-.footer {
-  text-align: center;
+footer {
+  display: flex;
+  justify-content: center;
   margin: 5% 0;
 }
 
-address {
+address a {
+  display: flex;
+  align-items: center;
   font-size: 1rem;
+
+  span {
+    margin-left: 3.5%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
