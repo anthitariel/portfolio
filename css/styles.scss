@@ -233,6 +233,7 @@ body.dark .hero-section {
 }
 
 section {
+  height: 100vh;
   padding: 10%;
 }
 
@@ -282,7 +283,7 @@ body.dark #skills {
 }
 
 .section-title {
-  margin-bottom: 3%;
+  margin-bottom: 5%;
 }
 
 .cards-container {
@@ -294,14 +295,13 @@ body.dark #skills {
 .card {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   position: relative;
-  min-height: 20rem;
-  max-height: 200rem;
+  min-height: 15rem;
+  max-height: 250rem;
   width: 100%;
   display: grid;
   margin-bottom: 1%;
   border-radius: 0.8rem;
 }
-
 
 .card-head {
   display: flex;
@@ -513,6 +513,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 5%;
+  margin-top: 5%;
 }
 
 address a {
@@ -609,8 +610,12 @@ address a {
     }
   }
 
-  #skills {
-    padding-bottom: 20%;
+  section {
+    padding: 30% 10% 20% 10%;
+  }
+
+  #about {
+    flex-direction: column;
   }
 
   .section-image img {
