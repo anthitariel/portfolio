@@ -37,6 +37,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
   </head>
 
   <body class="mode">
@@ -45,7 +46,8 @@
         <nav>
           <ul class="menu-primary">
             <li><a href="#home">Home</a></li>
-            <li><a href="#skills">About</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
           </ul>
         </nav>
@@ -69,7 +71,7 @@
         <button class="contact-btn">Contact me</button>
       </div>
     </section>
-    <section id="skills">
+    <section id="about">
       <div class="section-content">
         <h2 class="section-title">About</h2>
         <p>
@@ -81,63 +83,41 @@
           technologies and use my expertise to tackle challenging tasks for
           successful project delivery.
         </p>
-
-        <h3 class="section-title">Skills:</h3>
-        <ul class="skills-list">
-          <li>JavaScript</li>
-          <li>React.js</li>
-          <li>Next.js</li>
-          <li>TypeScript</li>
-          <li>AngularJS</li>
-          <li>HTML</li>
-          <li>BEM</li>
-          <li>CSS/LESS/SASS</li>
-          <li>Tailwind CSS</li>
-          <li>GitHub/Gitlab</li>
-          <li>Figma/Photoshop</li>
-          <li>Agile</li>
-          <li>Jira</li>
-          <li>Formik</li>
-          <li>Sourcetree</li>
-          <li>Pattern Lab</li>
-          <li>Mustache</li>
-          <li>Microsoft Visual Studio Code</li>
-          <li>E-Commerce</li>
-          <li>SEO</li>
-          <li>ThemeForest/GoDaddy/WordPress</li>
-        </ul>
-        <h3 class="section-title">Certification:</h3>
-        <ul class="skills-list">
-          <li>
-            <a
-              href="https://www.coursera.org/account/accomplishments/certificate/45QE3TTXMXVR"
-              target="_blank"
-              >Coursera AngularJS</a
-            >
-          </li>
-          <li>
-            <a href="https://www.efset.org/cert/WfAVPS" target="_blank"
-              >EF SET English Certificate 63/100 (C1)</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.codecademy.com/profiles/anthitariel/certificates/36ae898a1d1c8524815305b2d1d2ebab"
-              target="_blank"
-              >Codecamy Intercative 2022</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.codecademy.com/profiles/anthitariel/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
-              target="_blank"
-              >Codecamy JavaScript 2021</a
-            >
-          </li>
-          <li id="wayUpCertificate">
-            <a href="#">WayUp Landing Page 2021</a>
-          </li>
-        </ul>
+        <h4 class="section-title">Certification:</h4>
+        <details hide>
+          <summary>Coursera AngularJS</summary>
+          <a
+            href="https://coursera.org/share/43865b09bc120b2a872c642251d25b23"
+            target="_blank"
+            >View the certificate</a
+          >
+        </details>
+        <details hide>
+          <summary>EF SET English Certificate 63/100 (C1)</summary>
+          <a href="https://www.efset.org/cert/WfAVPS" target="_blank"
+            >View the certificate</a
+          >
+        </details>
+        <details hide>
+          <summary>Codecamy Intercative 2022</summary>
+          <a
+            href="https://www.codecademy.com/profiles/anthitariel/certificates/36ae898a1d1c8524815305b2d1d2ebab"
+            target="_blank"
+            >View the certificate</a
+          >
+        </details>
+        <details hide>
+          <summary>Codecamy JavaScript 2021</summary>
+          <a
+            href="https://www.codecademy.com/profiles/anthitariel/certificates/705dcb15de0da4dd9d9fc4f3274b430e"
+            target="_blank"
+            >View the certificate</a
+          >
+        </details>
+        <details hide>
+          <summary>WayUp Landing Page 2021</summary>
+          <a href="#" id="wayUpCertificate">View the certificate</a>
+        </details>
         <div id="certificatePopup" class="popup">
           <button id="closePopupBtn">X</button>
           <img
@@ -147,10 +127,15 @@
         </div>
         <div class="overlay"></div>
       </div>
-
       <div class="section-image">
-        <img src="img/anthitariel-photo.jpg" alt="my photo" />
+        <a href="https://www.instagram.com/p/C0OV9ICMmjy/" target="_blank"
+          ><img src="img/anthitariel-photo.jpg" alt="my photo"
+        /></a>
       </div>
+    </section>
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="cards-container"></div>
     </section>
     <section id="projects">
       <h2 class="section-title">Projects</h2>

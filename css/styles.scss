@@ -40,6 +40,12 @@ h3 {
   @extend %all-headings;
 }
 
+h4 {
+  font-size: 1.4rem;
+  margin: 3% 0;
+  @extend %all-headings;
+}
+
 a {
   color: $primary-color;
   text-decoration: none;
@@ -164,11 +170,12 @@ header.dark .menu-primary li a:after {
   align-items: center;
   height: 100vh;
   color: $primary-color;
+  background-color: $third-color;
 }
 
 body.dark .hero-section {
+  background-color: $primary-color;
   color: #fff;
-  background-color: black;
 }
 
 .hero-title {
@@ -214,14 +221,14 @@ body.dark .hero-section {
   display: inline-block;
   padding: 2.5% 5%;
   color: #fff;
-  background-color: $primary-color;
+  background-color: $link-color;
   text-align: center;
   margin-top: 4%;
   border-radius: 0.5rem;
 }
 
 .contact-btn:hover {
-  background-color: $link-color;
+  background-color: $second-color;
   cursor: pointer;
 }
 
@@ -229,8 +236,28 @@ section {
   padding: 10%;
 }
 
-#skills {
+details {
+  cursor: pointer;
+  margin-bottom: 2%;
+
+  a {
+    color: $link-color;
+
+    &:hover {
+      font-weight: 800;
+    }
+  }
+}
+
+details[open] {
+  margin-bottom: 5%;
+}
+
+#about {
   display: flex;
+}
+
+#skills {
   background-color: $third-color;
 }
 
@@ -257,36 +284,108 @@ body.dark #skills {
   margin-bottom: 3%;
 }
 
-.skills-list {
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%;
+}
+
+.card {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 20rem;
+  max-height: 200rem;
+  width: 100%;
+  display: grid;
+  margin-bottom: 1%;
+  border-radius: 0.8rem;
+}
+
+
+.card-head {
   display: flex;
-  list-style: none;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: $primary-color;
+  font-size: 130%;
+  font-weight: 700;
+  height: auto;
+  overflow: hidden;
   margin: 0;
-  flex-wrap: wrap;
+  border-radius: 0.8rem;
+  padding: 10%;
 
-  li {
-    margin-right: 1rem;
+  h3 {
+    font-size: 2rem;
+  }
 
-    &:hover {
-      color: $second-color;
-      transform: scale(1.05);
-      font-weight: 600;
-    }
-
-    &:last-child::after {
-      content: none;
-    }
-
-    a:hover {
-      transform: none;
-    }
+  .card-icon {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    height: 2.5rem;
+    width: 1.5rem;
+    fill: $primary-color;
   }
 }
 
-body.dark .skills-list {
-  li:hover {
-    color: $link-color;
+body.dark .card-head {
+  background-color: $second-color;
+  color: #fff;
+
+  .card-arrow-icon {
+    fill: #fff;
   }
+
+}
+
+.card-tail {
+  display: grid;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: black;
+  opacity: 0;
+  overflow: hidden;
+  top: 0;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-y: 2.25rem;
+  border-radius: 0.8rem;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+body.dark .card-tail {
+  background-color: $second-color;
+  color: #fff;
+}
+
+
+.card-tail ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 5%;
+}
+
+.card-tail li {
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  padding: 1%;
+  margin-bottom: 1%;
 }
 
 .popup {
@@ -334,6 +433,7 @@ body.dark .skills-list {
   background: $primary-color;
   z-index: 999;
 }
+
 
 // Slick Carousel 
 
@@ -434,6 +534,23 @@ address a {
 
 @media screen and (max-width: 768px) {
 
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 15rem;
+    max-height: 30rem;
+  }
+
+  .card-head h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-tail ul {
+    margin: 3%;
+  }
+
   .popup img {
     max-width: 40rem;
   }
@@ -468,9 +585,29 @@ address a {
     font-size: 2rem;
   }
 
-  #skills {
-    display: block;
+  .cards-container {
+    grid-template-columns: 1fr;
   }
+
+  .card {
+    min-height: 2rem;
+    max-height: 5rem;
+  }
+
+  .card-head {
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .card-icon {
+      position: absolute;
+      top: 30%;
+      left: 90%;
+      height: 2rem;
+      width: 1rem;
+    }
+  }
+
 
   .section-image img {
     width: 100%;
