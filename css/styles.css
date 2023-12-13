@@ -665,6 +665,9 @@ address a span {
     height: 2rem;
     width: 1rem;
   }
+  #skills {
+    padding-bottom: 20%;
+  }
   .section-image img {
     width: 100%;
   }
