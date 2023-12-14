@@ -5,6 +5,9 @@ $("#slick").slick({
   slidesToScroll: 2,
   adaptiveHeight: true,
   arrows: false,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
   // prevArrow: "<span class='slick-prev'>&lt;</span>",
   // nextArrow: "<span class='slick-next'>&gt;</span>",
   responsive: [
