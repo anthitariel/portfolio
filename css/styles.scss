@@ -225,11 +225,22 @@ body.dark .hero-section {
   text-align: center;
   margin-top: 4%;
   border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
+  font-size: 130%;
+
+  &:hover {
+    background-color: $second-color;
+    cursor: pointer;
+  }
 }
 
-.contact-btn:hover {
-  background-color: $second-color;
-  cursor: pointer;
+body.dark .contact-btn {
+  background-color: #fff;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $link-color;
+  }
 }
 
 section {
@@ -240,6 +251,10 @@ section {
 details {
   cursor: pointer;
   margin-bottom: 2%;
+  border-radius: 0.5rem;
+  border: 0.1rem solid;
+  padding: 0 2%;
+  transition: 300ms;
 
   a {
     color: $link-color;
@@ -250,8 +265,25 @@ details {
   }
 }
 
+body.dark details {
+  a {
+    color: $link-color;
+  }
+}
+
 details[open] {
   margin-bottom: 5%;
+  padding-bottom: 2%;
+}
+
+summary::before,
+summary::after {
+  transition: 500ms;
+}
+
+summary {
+  padding: 2% 0;
+  font-weight: 800;
 }
 
 #about {
@@ -272,7 +304,7 @@ body.dark #skills {
 }
 
 .section-image img {
-  max-width: 27rem;
+  max-width: 32rem;
   border-radius: 0.5rem;
   opacity: 0.8;
   margin-top: 10%;
@@ -348,8 +380,8 @@ body.dark .card-head {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #fff;
-  color: black;
+  background-color: $link-color;
+  color: #fff;
   opacity: 0;
   overflow: hidden;
   top: 0;
@@ -365,12 +397,6 @@ body.dark .card-head {
   }
 }
 
-body.dark .card-tail {
-  background-color: $second-color;
-  color: #fff;
-}
-
-
 .card-tail ul {
   list-style: none;
   display: flex;
@@ -378,13 +404,12 @@ body.dark .card-tail {
   flex-wrap: wrap;
   overflow: hidden;
   margin: 5% 10%;
+  font-size: 110%;
 }
 
 .card-tail li {
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
   padding: 1%;
-  margin-bottom: 1%;
+  margin: 1% 1% 0 0;
 }
 
 .popup {
@@ -537,21 +562,25 @@ address a {
     flex-direction: column;
   }
 
+  .section-image img {
+    max-width: 100%;
+    margin-top: 5%;
+  }
+
+  .section-content {
+    padding-right: 0;
+  }
+
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .card {
-    min-height: 15rem;
-    max-height: 30rem;
+  .card-tail ul {
+    font-size: 100%;
   }
 
   .card-head h3 {
-    font-size: 1.5rem;
-  }
-
-  .card-tail ul {
-    margin: 3%;
+    font-size: 1.3rem;
   }
 
   .popup img {
@@ -573,36 +602,18 @@ address a {
     font-size: 2rem;
   }
 
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 2rem;
-    max-height: 5rem;
-    margin-bottom: 3%;
-  }
-
   .card-head {
     h3 {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
+  }
 
-    .card-icon {
-      position: absolute;
-      top: 30%;
-      left: 90%;
-      height: 2rem;
-      width: 1rem;
-    }
+  .card-tail ul {
+    font-size: 90%;
   }
 
   section {
     padding: 30% 10% 20% 10%;
-  }
-
-  .section-image img {
-    width: 100%;
   }
 
   .popup img {
