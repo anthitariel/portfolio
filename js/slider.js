@@ -4,8 +4,9 @@ $("#slick").slick({
   slidesToShow: 2,
   slidesToScroll: 2,
   adaptiveHeight: true,
-  prevArrow: "<span class='slick-prev'>&lt;</span>",
-  nextArrow: "<span class='slick-next'>&gt;</span>",
+  arrows: false,
+  // prevArrow: "<span class='slick-prev'>&lt;</span>",
+  // nextArrow: "<span class='slick-next'>&gt;</span>",
   responsive: [
     {
       breakpoint: 576,

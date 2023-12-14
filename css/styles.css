@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -265,7 +264,7 @@ body.dark .hero-section {
 }
 
 section {
-  height: 100vh;
+  height: auto;
   padding: 10%;
 }
 
@@ -338,7 +337,7 @@ body.dark #skills {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   border-radius: 0.8rem;
 }
 
@@ -383,7 +382,7 @@ body.dark .card-head {
   color: #fff;
 }
 
-body.dark .card-head .card-arrow-icon {
+body.dark .card-head .card-icon {
   fill: #fff;
 }
 
@@ -424,9 +423,6 @@ body.dark .card-tail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -434,7 +430,7 @@ body.dark .card-tail {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
-  margin: 5%;
+  margin: 5% 10%;
 }
 
 .card-tail li {
@@ -548,36 +544,6 @@ body.dark .card-tail {
   font-size: 1rem;
 }
 
-#slick .slick-prev,
-#slick .slick-next {
-  content: "▶";
-  margin: 0 1%;
-  color: white;
-  font-size: 2rem;
-  z-index: 500;
-  position: absolute;
-  bottom: 50%;
-}
-
-#slick .slick-prev:hover,
-#slick .slick-next:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  font-weight: 600;
-  cursor: pointer;
-  color: #3d3d3c;
-}
-
-#slick .slick-prev.slick-prev,
-#slick .slick-next.slick-prev {
-  left: 0;
-}
-
-#slick .slick-prev.slick-next,
-#slick .slick-next.slick-next {
-  right: 0;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -610,6 +576,12 @@ address a span {
 }
 
 @media screen and (max-width: 768px) {
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .cards-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -627,22 +599,12 @@ address a span {
   .popup img {
     max-width: 40rem;
   }
-  #slick .slick-cards {
-    height: 15rem;
-  }
-  #slick .slick-prev,
-  #slick .slick-next {
-    font-size: 2rem;
-  }
   .hero-title h1 {
     font-size: 1.4rem;
   }
 }
 
 @media screen and (max-width: 425px) {
-  * {
-    font-size: 90%;
-  }
   .menu-primary {
     display: block;
   }
@@ -656,6 +618,7 @@ address a span {
   .card {
     min-height: 2rem;
     max-height: 5rem;
+    margin-bottom: 3%;
   }
   .card-head h3 {
     font-size: 1.1rem;
@@ -669,12 +632,6 @@ address a span {
   }
   section {
     padding: 30% 10% 20% 10%;
-  }
-  #about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .section-image img {
     width: 100%;
