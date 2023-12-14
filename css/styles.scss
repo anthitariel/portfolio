@@ -53,6 +53,7 @@ a {
   &:hover {
     color: $link-color;
     cursor: pointer;
+    font-weight: 600;
   }
 }
 
@@ -258,10 +259,6 @@ details {
 
   a {
     color: $link-color;
-
-    &:hover {
-      font-weight: 800;
-    }
   }
 }
 

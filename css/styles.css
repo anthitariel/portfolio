@@ -50,6 +50,7 @@ a {
 a:hover {
   color: #3C9DD0;
   cursor: pointer;
+  font-weight: 600;
 }
 
 body.dark a {
@@ -293,10 +294,6 @@ details {
 
 details a {
   color: #3C9DD0;
-}
-
-details a:hover {
-  font-weight: 800;
 }
 
 body.dark details a {
