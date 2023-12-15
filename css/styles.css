@@ -190,7 +190,7 @@ body.dark .menu-icon .fa-align-justify {
           flex-direction: column;
   position: absolute;
   top: 105%;
-  right: 0;
+  right: 1%;
   width: 40%;
   height: auto;
   border-radius: 0.5rem;
