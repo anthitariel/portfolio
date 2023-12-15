@@ -623,6 +623,22 @@ address a {
 
 @media screen and (max-width: 768px) {
 
+  .menu-primary {
+    display: none;
+    margin-right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .contact-btn {
+    font-size: 140%;
+    padding: 7% 10%;
+    border-radius: 2rem;
+    margin-bottom: 15%;
+  }
+
   #about {
     flex-direction: column;
   }
@@ -660,31 +676,13 @@ address a {
 
 @media screen and (max-width: 425px) {
 
-  .contact-btn {
-    font-size: 140%;
-    padding: 7% 10%;
-    border-radius: 2rem;
-    margin-bottom: 15%;
-  }
-
   header {
     padding: 5% 10%;
-  }
-
-  .menu-primary {
-    display: none;
-    margin-right: 0;
-  }
-
-  .menu-toggle {
-    display: block;
   }
 
   .hero-text h1 {
     font-size: 2rem;
   }
-
-
 
   .card-head {
     h3 {
