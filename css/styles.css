@@ -401,6 +401,7 @@ body.dark #skills {
       grid-template-columns: repeat(3, minmax(0, 1fr));
   -webkit-column-gap: 2%;
           column-gap: 2%;
+  margin-top: 3%;
 }
 
 .card {
@@ -714,6 +715,7 @@ address a span {
   .cards-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    margin-top: 10%;
   }
   .card-tail ul {
     font-size: 100%;

@@ -365,6 +365,7 @@ body.dark #skills {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   -moz-column-gap: 2%;
   column-gap: 2%;
+  margin-top: 3%;
 }
 
 .card {
@@ -642,6 +643,7 @@ address a {
 
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 10%;
   }
 
   .card-tail ul {
