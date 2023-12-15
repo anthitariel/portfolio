@@ -300,7 +300,7 @@ body.dark .hero-section {
   color: #fff;
   background-color: #3C9DD0;
   text-align: center;
-  margin-top: 4%;
+  margin-top: 10%;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 0 1rem 0.1rem #928a8a;
           box-shadow: 0 0 1rem 0.1rem #928a8a;
@@ -730,6 +730,12 @@ address a span {
 }
 
 @media screen and (max-width: 425px) {
+  .contact-btn {
+    font-size: 140%;
+    padding: 7% 10%;
+    border-radius: 2rem;
+    margin-bottom: 15%;
+  }
   header {
     padding: 5% 10%;
   }

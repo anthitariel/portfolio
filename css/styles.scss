@@ -270,7 +270,7 @@ body.dark .hero-section {
   color: #fff;
   background-color: $link-color;
   text-align: center;
-  margin-top: 4%;
+  margin-top: 10%;
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
   font-size: 130%;
@@ -662,6 +662,13 @@ address a {
 }
 
 @media screen and (max-width: 425px) {
+
+  .contact-btn {
+    font-size: 140%;
+    padding: 7% 10%;
+    border-radius: 2rem;
+    margin-bottom: 15%;
+  }
 
   header {
     padding: 5% 10%;
