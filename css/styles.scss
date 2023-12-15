@@ -333,13 +333,12 @@ summary {
   display: flex;
 }
 
-#skills,
-footer {
-  background-color: $third-color;
+#skills {
+  background-color: #e9e9e9;
 }
 
 body.dark #skills {
-  background-color: $primary-color;
+  background-color: #2e2b2b;
 }
 
 .section-content {
@@ -571,6 +570,7 @@ body.dark .card-head {
     opacity: 0.6;
     border: 0;
     outline: none;
+    color: $primary-color
   }
 
   .slick-dots li button:before {
@@ -580,11 +580,18 @@ body.dark .card-head {
     top: 0;
     left: 0;
     text-align: center;
-    color: $primary-color;
+
   }
 
   .slick-dots li.slick-active button:before {
     color: $link-color;
+  }
+}
+
+body.dark #slick {
+
+  .slick-dots li button {
+    color: #fff;
   }
 }
 
@@ -593,6 +600,11 @@ footer {
   justify-content: center;
   padding: 5%;
   margin-top: 5%;
+  background-color: $third-color;
+}
+
+body.dark footer {
+  background-color: $primary-color;
 }
 
 address a {

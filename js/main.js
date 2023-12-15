@@ -17,6 +17,8 @@ $(document).ready(function () {
 
   // menu mobile
 
+  $(".menu-icon").addClass("fas fa-align-justify");
+
   toggleMenuIcon();
 
   $(".menu-toggle").click(function () {
@@ -44,6 +46,9 @@ $(document).ready(function () {
       500,
       function () {
         $(".menu-primary").removeClass("show-mobile-menu");
+        $(".menu-icon")
+          .removeClass("fa fa-window-close")
+          .addClass("fas fa-align-justify");
       }
     );
 
@@ -72,6 +77,9 @@ $(document).ready(function () {
       !$(event.target).closest(".menu-primary").length
     ) {
       $(".menu-primary").removeClass("show-mobile-menu");
+      $(".menu-icon")
+        .removeClass("fa fa-window-close")
+        .addClass("fas fa-align-justify");
     }
   });
 
