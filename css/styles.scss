@@ -81,7 +81,9 @@ header {
   border-bottom: 0.1rem solid #909090ad;
   box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
   background-color: rgba(255, 255, 255, 0.9);
-  color: black;
+  color: $primary-color;
+  display: flex;
+  justify-content: space-between;
 }
 
 body.dark header {
@@ -89,21 +91,10 @@ body.dark header {
   color: #fff;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
 .menu-primary {
   list-style: none;
   display: flex;
+  margin-right: 10rem;
 }
 
 .menu-primary li a.active {
@@ -111,7 +102,7 @@ nav {
 }
 
 .menu-primary li {
-  margin-right: 1rem;
+  margin-left: 10%;
 }
 
 .menu-primary a {
@@ -660,8 +651,13 @@ address a {
 
 @media screen and (max-width: 425px) {
 
+  header {
+    padding: 5% 10%;
+  }
+
   .menu-primary {
     display: none;
+    margin-right: 0;
   }
 
   .menu-toggle {

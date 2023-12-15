@@ -78,7 +78,13 @@ header {
   -webkit-box-shadow: 0 0 1rem 0.1rem #928a8a;
           box-shadow: 0 0 1rem 0.1rem #928a8a;
   background-color: rgba(255, 255, 255, 0.9);
-  color: black;
+  color: #2e2b2b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body.dark header {
@@ -86,33 +92,12 @@ body.dark header {
   color: #fff;
 }
 
-.header-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: left;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .menu-primary {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 10rem;
 }
 
 .menu-primary li a.active {
@@ -120,7 +105,7 @@ nav {
 }
 
 .menu-primary li {
-  margin-right: 1rem;
+  margin-left: 10%;
 }
 
 .menu-primary a {
@@ -737,8 +722,12 @@ address a span {
 }
 
 @media screen and (max-width: 425px) {
+  header {
+    padding: 5% 10%;
+  }
   .menu-primary {
     display: none;
+    margin-right: 0;
   }
   .menu-toggle {
     display: block;
