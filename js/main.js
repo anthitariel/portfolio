@@ -69,6 +69,10 @@ $(document).ready(function () {
         $(this).addClass("active");
       }
     });
+    $(".menu-primary").removeClass("show-mobile-menu");
+    $(".menu-icon")
+      .removeClass("fa fa-window-close")
+      .addClass("fas fa-align-justify");
   });
 
   $(document).on("click", function (event) {
