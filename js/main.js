@@ -15,18 +15,40 @@ $(document).ready(function () {
       .addClass(isDark ? "fa-moon" : "fa-sun");
   }
 
+  // menu mobile
+
+  toggleMenuIcon();
+
+  $(".menu-toggle").click(function () {
+    $(".menu-primary").toggleClass("show-mobile-menu");
+    toggleMenuIcon();
+  });
+
+  function toggleMenuIcon() {
+    const menuIcon = $(".menu-icon");
+    const isMenuOpen = $(".menu-primary").hasClass("show-mobile-menu");
+    menuIcon
+      .removeClass(isMenuOpen ? "fas fa-align-justify" : "fa fa-window-close")
+      .addClass(isMenuOpen ? "fa fa-window-close" : "fas fa-align-justify");
+  }
+
   // menu scroll
-  $(".menu-primary li a").click(function () {
+  $(".menu-primary li a").click(function (event) {
+    event.preventDefault();
+
     let targetSection = $(this).attr("href");
     $("html, body").animate(
       {
         scrollTop: $(targetSection).offset().top,
       },
-      1000
+      500,
+      function () {
+        $(".menu-primary").removeClass("show-mobile-menu");
+      }
     );
+
     $(".menu-primary li a").removeClass("active");
     $(this).addClass("active");
-    return false;
   });
 
   $(window).scroll(function () {
@@ -42,6 +64,15 @@ $(document).ready(function () {
         $(this).addClass("active");
       }
     });
+  });
+
+  $(document).on("click", function (event) {
+    if (
+      !$(event.target).closest(".menu-toggle").length &&
+      !$(event.target).closest(".menu-primary").length
+    ) {
+      $(".menu-primary").removeClass("show-mobile-menu");
+    }
   });
 
   // contact btn

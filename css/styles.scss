@@ -163,6 +163,61 @@ header.dark .menu-primary li a:after {
   color: #fff;
 }
 
+.menu-icon {
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  .fa-window-close,
+  .fa-align-justify {
+    color: $primary-color;
+  }
+}
+
+body.dark .menu-icon {
+
+  .fa-window-close,
+  .fa-align-justify {
+    color: #fff;
+  }
+}
+
+.menu-primary.show-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 105%;
+  right: 0;
+  width: 40%;
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
+  z-index: 1000;
+  padding: 1% 5%;
+}
+
+body.dark .menu-primary.show-mobile-menu {
+  background-color: black;
+}
+
+.menu-primary.show-mobile-menu li {
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+.menu-primary.show-mobile-menu a {
+  font-size: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
 .hero-section {
   position: relative;
   display: flex;
@@ -317,8 +372,9 @@ body.dark #skills {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  -moz-column-gap: 2%;
+  column-gap: 2%;
 }
 
 .card {
@@ -328,7 +384,7 @@ body.dark #skills {
   max-height: 250rem;
   width: 100%;
   display: grid;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   border-radius: 0.8rem;
 }
 
@@ -605,6 +661,10 @@ address a {
 @media screen and (max-width: 425px) {
 
   .menu-primary {
+    display: none;
+  }
+
+  .menu-toggle {
     display: block;
   }
 
