@@ -401,22 +401,17 @@ body.dark #skills {
 
   .card-icon {
     position: absolute;
-    top: 75%;
-    left: 45%;
+    top: 7%;
+    left: 5%;
     height: 2.5rem;
-    width: 1.5rem;
-    fill: $primary-color;
+    width: 2.5rem;
+    fill: none;
   }
 }
 
 body.dark .card-head {
   background-color: $second-color;
   color: #fff;
-
-  .card-icon {
-    fill: #fff;
-  }
-
 }
 
 .card-tail {
@@ -689,9 +684,25 @@ address a {
     font-size: 2rem;
   }
 
+
+
   .card-head {
     h3 {
       font-size: 1rem;
+    }
+
+    .card-icon-mobile {
+      position: absolute;
+      top: 80%;
+      left: 41%;
+      height: 2.3rem;
+      width: 2.3rem;
+      fill: none;
+      stroke: $link-color;
+    }
+
+    .card-icon {
+      display: none;
     }
   }
 

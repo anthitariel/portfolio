@@ -446,20 +446,16 @@ body.dark #skills {
 
 .card-head .card-icon {
   position: absolute;
-  top: 75%;
-  left: 45%;
+  top: 7%;
+  left: 5%;
   height: 2.5rem;
-  width: 1.5rem;
-  fill: #2e2b2b;
+  width: 2.5rem;
+  fill: none;
 }
 
 body.dark .card-head {
   background-color: #3d3d3c;
   color: #fff;
-}
-
-body.dark .card-head .card-icon {
-  fill: #fff;
 }
 
 .card-tail {
@@ -753,6 +749,18 @@ address a span {
   }
   .card-head h3 {
     font-size: 1rem;
+  }
+  .card-head .card-icon-mobile {
+    position: absolute;
+    top: 80%;
+    left: 41%;
+    height: 2.3rem;
+    width: 2.3rem;
+    fill: none;
+    stroke: #3C9DD0;
+  }
+  .card-head .card-icon {
+    display: none;
   }
   .card-tail ul {
     font-size: 90%;
