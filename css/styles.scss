@@ -57,6 +57,11 @@ a {
   }
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
 body.dark a {
   color: #fff;
 
@@ -260,24 +265,31 @@ body.dark .hero-section {
 
 .hero-text p {
   font-size: 1.5rem;
+  margin-bottom: 10%;
 }
 
 .contact-btn {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 2.5% 5%;
   color: #fff;
   background-color: $link-color;
   text-align: center;
-  margin-top: 10%;
-  border-radius: 0.5rem;
+  width: 10rem;
+  max-width: 100%;
+  height: 3rem;
+  max-height: 100%;
+  font-weight: 500;
+  border-radius: 2rem;
   box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
+  transition: background-color 0.3s;
   font-size: 130%;
 
   &:hover {
     background-color: $second-color;
     cursor: pointer;
+    transform: scale(1.15);
+
   }
 }
 
@@ -592,28 +604,112 @@ body.dark #slick {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  padding: 5%;
+  padding: 2% 10%;
   margin-top: 5%;
   background-color: $third-color;
 }
 
 body.dark footer {
   background-color: $primary-color;
-}
 
-address a {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
+  .get-in-touch__title {
+    color: #fff;
+  }
 
-  span {
-    margin-left: 3.5%;
+  .social-media-icons-svg .dev {
+    fill: $primary-color;
   }
 }
 
+.get-in-touch__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.get-in-touch__title {
+  width: 367px;
+  height: 69px;
+  left: calc(50% - 367px/2 - 385.5px);
+  bottom: 118px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 172.69%;
+  letter-spacing: 0.005em;
+  color: $primary-color;
+}
+
+.get-in-touch__text {
+  width: 704px;
+  height: 31px;
+  left: calc(50% - 704px/2 - 217px);
+  bottom: 87px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 172.69%;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+.get-in-touch__icon {
+  height: 1.7rem;
+  width: 1.7rem;
+  fill: currentColor;
+  vertical-align: text-bottom;
+  margin: 0 0.2rem 0 -0.2rem;
+}
+
+.social-media {
+  align-items: center;
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.social-media-icons {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+.social-media-icons-svg {
+  margin-right: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+}
+
+.social-media-span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @media screen and (max-width: 1024px) {
+
+  .get-in-touch__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-btn {
+    font-size: 130%;
+    margin: 5% 0;
+  }
 
   .popup img {
     max-width: 55rem;
@@ -623,6 +719,10 @@ address a {
 
 @media screen and (max-width: 768px) {
 
+  .contact-btn {
+    margin: 10% 0;
+  }
+
   .menu-primary {
     display: none;
     margin-right: 0;
@@ -630,13 +730,6 @@ address a {
 
   .menu-toggle {
     display: block;
-  }
-
-  .contact-btn {
-    font-size: 140%;
-    padding: 7% 10%;
-    border-radius: 2rem;
-    margin-bottom: 15%;
   }
 
   #about {
@@ -719,4 +812,5 @@ address a {
   #slick {
     margin-top: 10%;
   }
+
 }

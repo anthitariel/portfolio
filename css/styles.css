@@ -53,6 +53,11 @@ a:hover {
   font-weight: 600;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
 body.dark a {
   color: #fff;
 }
@@ -290,26 +295,34 @@ body.dark .hero-section {
 
 .hero-text p {
   font-size: 1.5rem;
+  margin-bottom: 10%;
 }
 
 .contact-btn {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 2.5% 5%;
   color: #fff;
   background-color: #3C9DD0;
   text-align: center;
-  margin-top: 10%;
-  border-radius: 0.5rem;
+  width: 10rem;
+  max-width: 100%;
+  height: 3rem;
+  max-height: 100%;
+  font-weight: 500;
+  border-radius: 2rem;
   -webkit-box-shadow: 0 0 1rem 0.1rem #928a8a;
           box-shadow: 0 0 1rem 0.1rem #928a8a;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
   font-size: 130%;
 }
 
 .contact-btn:hover {
   background-color: #3d3d3c;
   cursor: pointer;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 body.dark .contact-btn {
@@ -659,13 +672,7 @@ body.dark #slick .slick-dots li button {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 5%;
+  padding: 2% 10%;
   margin-top: 5%;
   background-color: #e9e9e9;
 }
@@ -674,39 +681,131 @@ body.dark footer {
   background-color: #2e2b2b;
 }
 
-address a {
+body.dark footer .get-in-touch__title {
+  color: #fff;
+}
+
+body.dark footer .social-media-icons-svg .dev {
+  fill: #2e2b2b;
+}
+
+.get-in-touch__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1rem;
+  margin-bottom: 3%;
 }
 
-address a span {
-  margin-left: 3.5%;
+.get-in-touch__title {
+  width: 367px;
+  height: 69px;
+  left: calc(50% - 367px/2 - 385.5px);
+  bottom: 118px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 172.69%;
+  letter-spacing: 0.005em;
+  color: #2e2b2b;
+}
+
+.get-in-touch__text {
+  width: 704px;
+  height: 31px;
+  left: calc(50% - 704px/2 - 217px);
+  bottom: 87px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 172.69%;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+.get-in-touch__icon {
+  height: 1.7rem;
+  width: 1.7rem;
+  fill: currentColor;
+  vertical-align: text-bottom;
+  margin: 0 0.2rem 0 -0.2rem;
+}
+
+.social-media {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.social-media-icons {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+.social-media-icons-svg {
+  margin-right: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.social-media-icons-svg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.social-media-span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @media screen and (max-width: 1024px) {
+  .get-in-touch__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact-btn {
+    font-size: 130%;
+    margin: 5% 0;
+  }
   .popup img {
     max-width: 55rem;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .contact-btn {
+    margin: 10% 0;
+  }
   .menu-primary {
     display: none;
     margin-right: 0;
   }
   .menu-toggle {
     display: block;
-  }
-  .contact-btn {
-    font-size: 140%;
-    padding: 7% 10%;
-    border-radius: 2rem;
-    margin-bottom: 15%;
   }
   #about {
     -webkit-box-orient: vertical;
