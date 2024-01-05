@@ -11,13 +11,12 @@ $link-color: #3C9DD0;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   transition: background 0.5s;
   transition: all 0.6s;
   background-color: #fff;
   overflow-x: hidden;
-  font-family: 'Noto Sans', sans-serif, -apple-system, BlinkMacSystemFont;
-  color: $primary-color
+  font-family: "Noto Sans", "Roboto", sans-serif, -apple-system, BlinkMacSystemFont;
+  color: $primary-color;
 }
 
 body.dark {
@@ -389,6 +388,7 @@ body.dark #skills {
   display: grid;
   margin-bottom: 4%;
   border-radius: 0.8rem;
+  cursor: pointer;
 }
 
 .card-head {
