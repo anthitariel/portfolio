@@ -30,13 +30,16 @@ $(document).ready(function () {
     const menuIcon = $(".menu-icon");
     const isMenuOpen = $(".menu-primary").hasClass("show-mobile-menu");
     menuIcon
-      .removeClass(isMenuOpen ? "fas fa-align-justify" : "fa fa-window-close")
-      .addClass(isMenuOpen ? "fa fa-window-close" : "fas fa-align-justify");
+      .toggleClass("fa-align-justify", !isMenuOpen)
+      .toggleClass("fa-window-close", isMenuOpen);
   }
 
   // menu scroll
   $(".menu-primary li a").click(function (event) {
     event.preventDefault();
+
+    $(".menu-primary li a").removeClass("active");
+    $(this).addClass("active");
 
     let targetSection = $(this).attr("href");
     $("html, body").animate(
@@ -47,51 +50,15 @@ $(document).ready(function () {
       function () {
         $(".menu-primary").removeClass("show-mobile-menu");
         $(".menu-icon")
-          .removeClass("fa fa-window-close")
+          .removeClass("fa-window-close")
           .addClass("fas fa-align-justify");
       }
     );
-
-    $(".menu-primary li a").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $(window).scroll(function () {
-    let scrollPosition = $(window).scrollTop();
-    $(".menu-primary li a").each(function () {
-      let targetId = $(this).attr("href");
-      let targetSection = $(targetId);
-      if (
-        targetSection.position().top <= scrollPosition &&
-        targetSection.position().top + targetSection.height() > scrollPosition
-      ) {
-        $(".menu-primary li a").removeClass("active");
-        $(this).addClass("active");
-      }
-    });
-    $(".menu-primary").removeClass("show-mobile-menu");
-    $(".menu-icon")
-      .removeClass("fa fa-window-close")
-      .addClass("fas fa-align-justify");
-  });
-
-  $(document).on("click", function (event) {
-    if (
-      !$(event.target).closest(".menu-toggle").length &&
-      !$(event.target).closest(".menu-primary").length
-    ) {
-      $(".menu-primary").removeClass("show-mobile-menu");
-      $(".menu-icon")
-        .removeClass("fa fa-window-close")
-        .addClass("fas fa-align-justify");
-    }
   });
 
   // contact btn
-  $(document).ready(function () {
-    $(".contact-btn").click(function () {
-      window.location.href = "mailto:anfiya17@gmail.com";
-    });
+  $(".contact-btn").click(function () {
+    window.location.href = "mailto:anfiya17@gmail.com";
   });
 
   // the certificate popup
