@@ -13,15 +13,15 @@ $link-color: #3C9DD0;
 body {
   transition: background 0.5s;
   transition: all 0.6s;
-  background-color: #fff;
+  background-color: black;
   overflow-x: hidden;
-  font-family: "Noto Sans", "Roboto", sans-serif, -apple-system, BlinkMacSystemFont;
-  color: $primary-color;
+  font-family: "Montserrat", "Noto Sans", "Roboto", sans-serif, -apple-system, BlinkMacSystemFont;
+  color: #fff;
 }
 
-body.dark {
-  background-color: black;
-  color: #fff;
+body.light {
+  background-color: #fff;
+  color: $primary-color;
 }
 
 %all-headings {
@@ -46,7 +46,7 @@ h4 {
 }
 
 a {
-  color: $primary-color;
+  color: #fff;
   text-decoration: none;
 
   &:hover {
@@ -61,8 +61,8 @@ ul {
   list-style: none;
 }
 
-body.dark a {
-  color: #fff;
+body.light a {
+  color: $primary-color;
 
   &:hover {
     color: $link-color;
@@ -84,15 +84,16 @@ header {
   z-index: 999;
   border-bottom: 0.1rem solid #909090ad;
   box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
-  background-color: rgba(255, 255, 255, 0.9);
-  color: $primary-color;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
   display: flex;
   justify-content: space-between;
 }
 
-body.dark header {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+body.light header {
+
+  background-color: rgba(255, 255, 255, 0.9);
+  color: $primary-color;
 }
 
 .menu-primary {
@@ -128,8 +129,8 @@ body.dark header {
   transition: all 0.5s;
 }
 
-header.dark .menu-primary li a:after {
-  background: #fff;
+header.light .menu-primary li a:after {
+  background: red;
 }
 
 .menu-primary li a:hover:after {
@@ -141,17 +142,17 @@ header.dark .menu-primary li a:after {
 }
 
 .mode-icon {
-  color: #fff;
   font-size: 1rem;
   cursor: pointer;
 
   &:hover {
     transform: scale(1.15);
+    color: $link-color;
   }
 }
 
 .fa-sun {
-  color: $primary-color
+  color: $primary-color;
 }
 
 .fa-moon {
@@ -172,7 +173,7 @@ header.dark .menu-primary li a:after {
   }
 }
 
-body.dark .menu-icon {
+body.light .menu-icon {
 
   .fa-window-close,
   .fa-align-justify {
@@ -189,14 +190,14 @@ body.dark .menu-icon {
   width: 40%;
   height: auto;
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: $primary-color;
   box-shadow: 0 0 1rem 0.1rem rgb(146, 138, 138);
   z-index: 1000;
   padding: 1% 5%;
 }
 
-body.dark .menu-primary.show-mobile-menu {
-  background-color: black;
+body.light .menu-primary.show-mobile-menu {
+  background-color: $third-color;
 }
 
 .menu-primary.show-mobile-menu li {
@@ -220,13 +221,13 @@ body.dark .menu-primary.show-mobile-menu {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: $primary-color;
-  background-color: $third-color;
-}
-
-body.dark .hero-section {
   background-color: $primary-color;
   color: #fff;
+}
+
+body.light .hero-section {
+  background-color: $third-color;
+  color: $primary-color;
 }
 
 .hero-title {
@@ -271,8 +272,8 @@ body.dark .hero-section {
   border: none;
   outline: 0;
   display: inline-block;
-  color: #fff;
-  background-color: $link-color;
+  background-color: $third-color;
+  color: $primary-color;
   text-align: center;
   width: 10rem;
   max-width: 100%;
@@ -285,19 +286,21 @@ body.dark .hero-section {
   font-size: 130%;
 
   &:hover {
-    background-color: $second-color;
+    background-color: $link-color;
+    color: #fff;
     cursor: pointer;
     transform: scale(1.15);
 
   }
 }
 
-body.dark .contact-btn {
-  background-color: #fff;
-  color: $primary-color;
+body.light .contact-btn {
+  background-color: $second-color;
+  color: #fff;
 
   &:hover {
     background-color: $link-color;
+    color: #fff;
   }
 }
 
@@ -319,7 +322,7 @@ details {
   }
 }
 
-body.dark details {
+body.light details {
   a {
     color: $link-color;
   }
@@ -345,11 +348,11 @@ summary {
 }
 
 #skills {
-  background-color: #e9e9e9;
+  background-color: $primary-color;
 }
 
-body.dark #skills {
-  background-color: #2e2b2b;
+body.light #skills {
+  background-color: $third-color;
 }
 
 .section-content {
@@ -398,7 +401,7 @@ body.dark #skills {
   text-align: center;
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: $third-color;
   color: $primary-color;
   font-size: 130%;
   font-weight: 700;
@@ -421,9 +424,9 @@ body.dark #skills {
   }
 }
 
-body.dark .card-head {
-  background-color: $second-color;
-  color: #fff;
+body.light .card-head {
+  background-color: #fff;
+  color: $primary-color;
 }
 
 .card-tail {
@@ -578,7 +581,7 @@ body.dark .card-head {
     opacity: 0.6;
     border: 0;
     outline: none;
-    color: $primary-color
+    color: #fff;
   }
 
   .slick-dots li button:before {
@@ -596,20 +599,16 @@ body.dark .card-head {
   }
 }
 
-body.dark #slick {
+body.light #slick {
 
   .slick-dots li button {
-    color: #fff;
+    color: $second-color;
   }
 }
 
 footer {
   padding: 2% 10%;
   margin-top: 5%;
-  background-color: $third-color;
-}
-
-body.dark footer {
   background-color: $primary-color;
 
   .get-in-touch__title {
@@ -621,6 +620,18 @@ body.dark footer {
   }
 }
 
+body.light footer {
+  background-color: $third-color;
+
+  .get-in-touch__title {
+    color: $primary-color;
+  }
+
+  .social-media-icons-svg .dev {
+    fill: $third-color;
+  }
+}
+
 .get-in-touch__container {
   display: flex;
   justify-content: space-between;
@@ -629,11 +640,6 @@ body.dark footer {
 }
 
 .get-in-touch__title {
-  width: 367px;
-  height: 69px;
-  left: calc(50% - 367px/2 - 385.5px);
-  bottom: 118px;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -650,7 +656,6 @@ body.dark footer {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
   line-height: 172.69%;
   letter-spacing: 0.01em;
   color: #000;

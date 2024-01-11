@@ -3,16 +3,16 @@ $(document).ready(function () {
   toggleModeIcon();
 
   $(".mode-toggle").click(function () {
-    $(".mode").toggleClass("dark");
+    $(".mode").toggleClass("light");
     toggleModeIcon();
   });
 
   function toggleModeIcon() {
     const modeIcon = $(".mode-icon");
-    const isDark = $(".mode").hasClass("dark");
+    const isLight = $(".mode").hasClass("light");
     modeIcon
-      .removeClass(isDark ? "fa-sun" : "fa-moon")
-      .addClass(isDark ? "fa-moon" : "fa-sun");
+      .removeClass(isLight ? "fa-moon" : "fa-sun")
+      .addClass(isLight ? "fa-sun" : "fa-moon");
   }
 
   // menu mobile
