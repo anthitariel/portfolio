@@ -390,8 +390,8 @@ body.light #skills {
 }
 .card-head .card-icon {
   position: absolute;
-  top: 7%;
-  left: 5%;
+  bottom: 7%;
+  right: 5%;
   height: 2.5rem;
   width: 2.5rem;
   fill: none;
@@ -737,4 +737,6 @@ body.light footer .social-media-icons-svg .dev {
   #slick {
     margin-top: 10%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
