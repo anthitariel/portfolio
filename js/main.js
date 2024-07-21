@@ -56,11 +56,6 @@ $(document).ready(function () {
     );
   });
 
-  // contact btn
-  $(".contact-btn").click(function () {
-    window.location.href = "mailto:anfiya17@gmail.com";
-  });
-
   // the certificate popup
   const wayUpCertificate = $("#wayUpCertificate");
   const certificatePopup = $("#certificatePopup");
