@@ -56,6 +56,14 @@ $(document).ready(function () {
     );
   });
 
+  // contact me button
+    $(".contact-btn").click(function(event) {
+        event.preventDefault(); 
+          $('html, body').animate({
+            scrollTop: $(document).height() 
+          }, 1000); 
+    });
+
   // the certificate popup
   const wayUpCertificate = $("#wayUpCertificate");
   const certificatePopup = $("#certificatePopup");
